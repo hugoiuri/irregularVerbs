@@ -19,5 +19,21 @@ var verbs = [
         'infinitive': 'sleep',
         'past': 'slept', 
         'participle': 'slept'
-    },
+    },{
+        'infinitive': 'shine',
+        'past': 'shone', 
+        'participle': 'shone'
+    },{
+        'infinitive': 'wind',
+        'past': 'wound', 
+        'participle': 'wound'
+    },{
+        'infinitive': 'write',
+        'past': 'wrote', 
+        'participle': 'written'
+    },{
+        'infinitive': 'undergo',
+        'past': 'underwent', 
+        'participle': 'undergone'
+    }
 ]
