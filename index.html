@@ -47,9 +47,10 @@
     }
 
     function update() {
+        const numberOfItens = 2
         let arrayVerbs = [];
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < numberOfItens; i++) {
             arrayVerbs.push(verbs[Math.floor(Math.random() * verbs.length)])
         }
 
@@ -71,22 +72,21 @@
 
     function check() {
         const verbs = document.getElementById('verbs');
-        const result = document.getElementById('result');
         let correct = 0
 
         const inputs = verbs.getElementsByTagName('input');
-        for (index = 0; index < inputs.length; ++index) {
+        for (index = 0; index < inputs.length; index++) {
             if (inputs[index].id === inputs[index].value) {
                 correct++;
             }
         }
         const status = correct == inputs.length ? 'success' : 'danger'
-        const message = correct == inputs.length 
-            ? 'Success! All your answers are correct.' 
-            : `Try again. ${correct} correct, total ${inputs.length}`;
         
+        const result = document.getElementById('result');
         result.innerHTML = `<div class="alert alert-${status}" role="alert">
-                                ${message}
+                                ${correct == inputs.length 
+                                    ? 'Success! All your answers are correct.' 
+                                    : `Try again. ${correct} correct, total ${inputs.length}`}
                             </div>
                             <hr/>`
         
