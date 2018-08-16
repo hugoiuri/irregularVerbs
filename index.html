@@ -33,7 +33,6 @@
         </table>
         <hr/>
         <div id="result"></div>
-        <hr/>
         <button class="btn btn-success btn-lg btn-block" onclick="check()">Check</button>
         <button class="btn btn-danger btn-lg btn-block" onclick="update()">Reset</button>
     </div>
@@ -88,7 +87,8 @@
         
         result.innerHTML = `<div class="alert alert-${status}" role="alert">
                                 ${message}
-                            </div>`
+                            </div>
+                            <hr/>`
         
         result.style.display = "block";
     }
